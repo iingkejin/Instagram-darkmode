@@ -85,7 +85,8 @@ body {
 }
 
 .form-group {
-  margin: 0 40px;
+  margin: 0 40px 6px;
+  /* margin : 0 40px 6px 40px */
 }
 
 .animate-input {
@@ -104,6 +105,7 @@ body {
   /* 이벤트 제어 : HTML요소에 정의된 클릭을 비활성화 시켜준다. 
   요소가 포인터 이벤트에 반응 X */
   pointer-events: none;
+  transform-origin: left;
 }
 
 .animate-input input {
@@ -115,6 +117,78 @@ body {
   background-color: var(--box-bg);
   color: var(--txt-color);
 }
+
+.animate-input.active span {
+  transform: scale(0.8) translateY(-10px);
+}
+
+.animate-input.active input {
+  padding: 14px 0 2px 8px;
+}
+
+.animate-input button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  border: none;
+  outline: none;
+  background-color:transparent;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.animate-input.active button{
+  display: inline;
+}
+
+.btn-group {
+  padding: 8px 40px;
+}
+
+.btn-login {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: rgba(0, 149, 246, 0.3);
+}
+
+.or-box {
+  display: flex;
+  align-items: center;
+  /* 위, 좌/우, 아래 */
+  padding: 10px 40px 18px;
+
+}
+
+.or-box div:nth-child(1),
+.or-box div:nth-child(3) {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--box-border-color);
+}
+
+.or-box div:nth-child(2) {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--txt-second-color);
+  margin: 0 18px;
+}
+
+
 
 .btn-fb img {
   width: 30px;
