@@ -3,7 +3,7 @@ let btn_login = document.getElementById("btn-login");
 let darkmode_toggle = document.getElementById("darkmode-toggle");
 
 // 화살표 함수(arrow function)
-// 정규 함수 표현식보다 훨씬 간결하게 함수를 만들 수 있다.
+// 함수 선언문 방식 보다 훨씬 간결하게 함수를 만들 수 있다.
 
 // let num = function(x,y) {
 //   return x + y;
